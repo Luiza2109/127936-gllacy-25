@@ -1,7 +1,7 @@
 # Личный проект «Глейси»
 
 * Студент: [Луиза Сергулова](https://up.htmlacademy.ru/htmlcss/25/user/127936).
-* Наставник: Егор Дьяченко.
+* Наставник: [Егор Дьяченко](https://htmlacademy.ru/profile/semperhomolupus).
 
 ---
 
