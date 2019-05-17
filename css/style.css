@@ -1,6 +1,6 @@
 body {
 	margin: 0;
-  	padding: 0;
+  padding: 0;
 
 	font-family: "Roboto", sans-serif;
 	font-weight: 400;
@@ -12,30 +12,30 @@ body {
 }
 
 a {
-  	text-decoration: none;
+	text-decoration: none;
 }
 
 img {
-  	max-width: 100%;
-  	height: auto;
+	max-width: 100%;
+	height: auto;
 }
 
 .visually-hidden:not(:focus):not(:active),
 input[type="checkbox"].visually-hidden,
 input[type="radio"].visually-hidden {
-  	position: absolute;
+	position: absolute;
 
-  	width: 1px;
-  	height: 1px;
-  	margin: -1px;
-  	border: 0;
-  	padding: 0;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	border: 0;
+	padding: 0;
 
-  	white-space: nowrap;
+	white-space: nowrap;
 
-  	clip-path: inset(100%);
-  	clip: rect(0 0 0 0);
-  	overflow: hidden;
+	clip-path: inset(100%);
+	clip: rect(0 0 0 0);
+	overflow: hidden;
 }
 
 .container {
@@ -53,13 +53,50 @@ input[type="radio"].visually-hidden {
   transition: background-image 0.5s ease, background-color 0.5s ease;
 }
 
-.site-navigation,
-.navigation-hover {
+.main-navigation {
+  display: flex;
+}
+
+.user-wrapper {
+  margin-left: auto;
+  width: 245px;
+  padding-top: 23px;
+}
+
+.main-header-logo {
+  margin-right: 24px;
+  padding-top: 9px;
+}
+
+.site-navigation{
   margin: 0;
   padding: 0;
   list-style: none;
 
-  color: #ffffff;
+  width: 350px;
+  padding-top: 28px;
+}
+
+.main-info {
+  display: flex;
+  flex-direction: column;
+  width: 180px;
+  margin-left: auto;
+
+  font-weight: 700;
+  line-height: 16px;
+}
+
+.main-info span {
+  font-size: 22px;
+  line-height: 26px;
+}
+
+.navigation-hover,
+.user-navigation {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .navigation-hover {
@@ -69,6 +106,7 @@ input[type="radio"].visually-hidden {
 .site-navigation a {
 	color: #ffffff;
 	font-weight: 700;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .navigation-hover a {
@@ -108,9 +146,9 @@ input[type="radio"].visually-hidden {
 
 .slider {
   position: relative;
-  
+
   padding-top: 321px;
-  
+
   text-align: center;
   color: #ffffff;
 }
@@ -133,7 +171,7 @@ input[type="radio"].visually-hidden {
 .slider-list {
   margin: 0;
   padding: 0;
-  
+
   list-style: none;
 }
 
@@ -141,7 +179,7 @@ input[type="radio"].visually-hidden {
   width: 700px;
   margin: 0 auto;
   margin-bottom: 27px;
-  
+
   font-size: 60px;
   line-height: 60px;
   font-weight: 800;
@@ -169,9 +207,11 @@ input[type="radio"].visually-hidden {
   cursor: pointer;
 }
 
-.button:hover {
+.button:hover,
+.button:focus {
   background: linear-gradient(to bottom, #f58669 0%, #ec6f5e 100%);
   box-shadow: 0 2px 2px rgba(172, 16, 0, 1);
+  outline: none;
 }
 
 .button:active {
@@ -183,8 +223,8 @@ input[type="radio"].visually-hidden {
   position: absolute;
   bottom: 63px;
   left: 0;
-  z-index: 20;
-  
+  z-index: 200;
+
   font-size: 0;
 }
 
@@ -200,6 +240,12 @@ input[type="radio"].visually-hidden {
   border: 2px solid #ffffff;
   border-radius: 50%;
   cursor: pointer;
+}
+
+.slider-controls label:hover,
+.slider-controls label:focus {
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.4);
 }
 
 #product-1:checked ~ .site-wrapper {
@@ -230,6 +276,11 @@ input[type="radio"].visually-hidden {
 }
 
 /* --------- Promo --------- */
+.promo {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
 
 .promo-raspberry,
 .promo-chocolate {
@@ -280,6 +331,8 @@ input[type="radio"].visually-hidden {
 /* -------- Хиты мороженого --------- */
 
 .hit-list {
+  display: flex;
+  flex-wrap: wrap;
 	position: relative;
 	margin: 0;
 	padding: 0;
@@ -288,6 +341,11 @@ input[type="radio"].visually-hidden {
 
 .hit-item {
 	width: 267px;
+  margin-right: 26px;
+}
+
+.hit-item:nth-child(4n) {
+  margin-right: 0;
 }
 
 .hit-item::before {
@@ -331,8 +389,17 @@ input[type="radio"].visually-hidden {
 	font-size: 30px;
 }
 
-.cream-link {
+.cream-description {
 	color: #ffffff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.cream-description:hover,
+.cream-description:focus,
+.cream-description:active {
+  outline: none;
+  color: #ffbc9e;
+  border-bottom: 1px solid #ffbc9e;
 }
 
 /* -------- о нас --------- */
@@ -395,6 +462,12 @@ input[type="radio"].visually-hidden {
 }
 
 /* ----------  Блог и рассылка ------------- */
+.mailing {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
 .blog {
 	width: 560px;
 	min-height: 220px;
@@ -410,15 +483,24 @@ input[type="radio"].visually-hidden {
 	padding-top: 20px;
 }
 
-.blog-method {
+.blog-box {
 	width: 282px;
-	display: block;
 	padding-left: 20px;
+}
 
-	color: #323232;
-	font-size: 24px;
-	line-height: 30px;
-	font-weight: 700;
+.blog-method {
+  color: #323232;
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 700;
+  border-bottom: 2px solid #323232;
+}
+
+.blog-method:hover,
+.blog-method:focus {
+  outline: none;
+  color: #e84d37;
+  border-bottom: 2px solid #e84d37;
 }
 
 .mailing-email {
@@ -513,11 +595,24 @@ input[name="email"] {
 }
 
 /* -------- footer ------- */
-.social-list,
+.footer-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.social-list {
+  margin: 0;
+  padding: 0;
+  width: 186px;
+
+  list-style: none;
+}
+
 .documents-list {
 	margin: 0;
 	padding: 0;
-	
+  width: 327px;
+
 	list-style: none;
 }
 
@@ -527,6 +622,16 @@ input[name="email"] {
 	color: #ffffff;
 	font-size: 13px;
 	line-height: 18px;
+}
+
+.documents-list a {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.documents-list a:hover,
+.documents-list a:focus {
+  outline: none;
+  color: #ffbc9e;
 }
 
 .social-list a {
@@ -547,14 +652,16 @@ input[name="email"] {
 }
 
 .social-item:nth-child(3) a {
-	background-image: url("../img/svg-gllacy/fb.svg");	
+	background-image: url("../img/svg-gllacy/fb.svg");
 }
 
 .social-item:nth-child(4) a {
-	background-image: url("../img/svg-gllacy/vk.svg");	
+	background-image: url("../img/svg-gllacy/vk.svg");
 }
 
-.social-item a:hover {
+.social-item a:hover,
+.social-item a:focus {
+  outline: none;
 	opacity: 1;
 }
 
@@ -564,6 +671,15 @@ input[name="email"] {
 
 .documents-active {
 	font-weight: 700;
+}
+
+.htmlacademy {
+  width: 200px;
+}
+
+.htmlacademy-info {
+  font-size: 12px;
+  line-height: 18px;
 }
 
 /* -------- breadcrumbs ---------- */
@@ -587,10 +703,10 @@ input[name="email"] {
 
 /* -------- sorting ------------- */
 .sorting fieldset {
-  	margin: 0;
-  	padding: 0;
+	margin: 0;
+	padding: 0;
 
-  	border: none;
+	border: none;
 }
 
 .sorting legend {
@@ -607,10 +723,18 @@ input[name="email"] {
 }
 
 /* -------------- sorting-list --------------- */
+.sorting-box {
+  display: flex;
+}
+
+.sorting-popular {
+  width: 195px;
+}
+
 .sorting-list {
 	position: relative;
 	padding: 8px 50px 8px 16px;
-	
+
 	background-color: rgba(255, 255, 255, 0.2);
 	color: #ffffff;
 	font-weight: 500;
@@ -631,7 +755,7 @@ input[name="email"] {
 }
 
 .sorting-list:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .sorting-list:focus {
@@ -641,55 +765,58 @@ input[name="email"] {
 
 
 /* ------------- range-controls ------------ */
+.price-money {
+  width: 220px;
+}
 
 .range-controls {
-  	position: relative;
-  	width: 220px;
-  
-  	border-radius: 20px;
-  	padding: 16px 21px;
-  
-  	background-color: rgba(255, 255, 255, 0.2);
+	position: relative;
+	width: 220px;
+
+	border-radius: 20px;
+	padding: 16px 21px;
+
+	background-color: rgba(255, 255, 255, 0.2);
 }
 
 .range-controls .scale {
-  	height: 4px;
+	height: 4px;
 
-  	background: #d1dad3;
+	background: #d1dad3;
 }
 
 .range-controls .bar {
-  	width: 70%;
-  	height: 4px;
+	width: 70%;
+	height: 4px;
 
-  	background: #f8f7f4;
+	background: #f8f7f4;
 }
 
 .range-controls .toggle {
-  	position: absolute;
-  	top: 8px;
-  	left: 0;
-  
-  	width: 4px;
-  	height: 4px;
-  	padding: 0;
+	position: absolute;
+	top: 8px;
+	left: 0;
 
-  	border: 8px solid #ffffff;
-  	background-color: #ababab;
-  	border-radius: 50%;
-  	cursor: pointer;
+	width: 4px;
+	height: 4px;
+	padding: 0;
+
+	border: 8px solid #ffffff;
+	background-color: #ababab;
+	border-radius: 50%;
+	cursor: pointer;
 }
 
 .range-controls .toggle-min {
-  	left: 40px;
+  left: 40px;
 }
 
 .range-controls .toggle-max {
-  	left: 165px;
+	left: 165px;
 }
 
 .price-controls {
-  	font-size: 0;
+	font-size: 0;
 }
 
 .toggle-min:hover,
@@ -698,12 +825,20 @@ input[name="email"] {
 }
 
 /* -------------- fatty -------------- */
+.sorting-filler {
+  width: 703px;
+}
+
+.fatty-percent {
+  width: 416px;
+}
+
 .filter-option,
 .fatty-radio {
-  	height: 25px;
+	height: 25px;
 
-  	/* временно */ 
-  	padding-bottom: 10px;
+	/* временно */
+	padding-bottom: 10px;
 }
 
 .fatty-radio label,
@@ -719,73 +854,75 @@ input[name="email"] {
 
 .filter-option input[type="checkbox"] + label::before,
 .fatty-radio input[type="radio"] + label::before {
-  	content: "";
-  	position: absolute;
-  	top: -5px;
-  	left: 0px;
+	content: "";
+	position: absolute;
+	top: -5px;
+	left: 0px;
 
-  	width: 27px;
-  	height: 27px;
+	width: 27px;
+	height: 27px;
 }
 
 .filter-option input[type="checkbox"] + label::before {
-  	background-image: url("../img/svg-gllacy/checkbox-off.svg");
-  	background-repeat: no-repeat;
-  	opacity: 0.8;
+	background-image: url("../img/svg-gllacy/checkbox-off.svg");
+	background-repeat: no-repeat;
+	opacity: 0.8;
 }
 
 .fatty-radio input[type="radio"] + label::before {
-  	background-image: url("../img/svg-gllacy/radio-off.svg");
-  	background-repeat: no-repeat;
-  	opacity: 0.8;
+	background-image: url("../img/svg-gllacy/radio-off.svg");
+	background-repeat: no-repeat;
+	opacity: 0.8;
 }
 
 .filter-option input[type="checkbox"]:checked ~ label::before {
-  	content: "";
-  	position: absolute;
-  	width: 26px;
-  	height: 26px;
-  	background: url("../img/svg-gllacy/checkbox-on.svg") 0 0 no-repeat;
+	content: "";
+	position: absolute;
+	width: 26px;
+	height: 26px;
+	background: url("../img/svg-gllacy/checkbox-on.svg") 0 0 no-repeat;
 }
 
 .fatty-radio input[type="radio"]:checked ~ label::before {
-  	background: url("../img/svg-gllacy/radio-on.svg") 0 0 no-repeat;
+	background: url("../img/svg-gllacy/radio-on.svg") 0 0 no-repeat;
 }
 
 .filter-option input[type="checkbox"] + label:hover::before,
 .filter-option input[type="checkbox"]:focus + label::before,
 .fatty-radio input[type="radio"] + label:hover::before,
 .fatty-radio input[type="radio"]:focus + label::before {
-  	opacity: 1;
+	opacity: 1;
 }
 
 .filter-percent:disabled + label,
 .filter-filler:disabled + label {
-  	opacity: 0.4;
+  opacity: 0.4;
 }
 
 .filter-button {
 	display: inline-block;
 	padding: 9px 27px;
-	
-	font-size: 16px;
-  	line-height: 18px;
-  	font-weight: 500;
-  	text-align: center;
-  	color: #ffffff;
-  	vertical-align: top;
-  	background: rgba(255, 255, 255, 0.19);
-  	border: 2px solid #ffffff;
-  	border-radius: 50px;
-  	cursor: pointer;
 
-  	outline: none;
+	font-size: 16px;
+	line-height: 18px;
+	font-weight: 500;
+	text-align: center;
+	color: #ffffff;
+	vertical-align: top;
+	background: rgba(255, 255, 255, 0.19);
+	border: 2px solid #ffffff;
+	border-radius: 50px;
+	cursor: pointer;
+
+	outline: none;
 }
 
-.filter-button:hover {
+.filter-button:hover,
+.filter-button:focus {
 	border-color: transparent;
 	background: #fbfcfb;
 	color: #323232;
+  outline: none;
 }
 
 .filter-button:active {
@@ -796,14 +933,21 @@ input[name="email"] {
 
 /* -------- catalog --------------- */
 .cream-list {
+  display: flex;
+  flex-wrap: wrap;
 	margin: 0;
 	padding: 0;
-	
+
 	list-style: none;
 }
 
 .cream-item {
+  margin-right: 26px;
 	width: 267px;
+}
+
+.cream-item:nth-child(4n) {
+  margin-right: 0;
 }
 
 .cream-item img {
@@ -812,7 +956,7 @@ input[name="email"] {
 
 .catalog-btn {
 	padding: 10px 18px;
-	
+
 	font-size: 18px;
 	line-height: 24px;
 }
@@ -838,7 +982,9 @@ input[name="email"] {
 
 .pagination-list a {
 	display: inline-block;
-	color: #ffffff;
+  color: #ffffff;
+
+  vertical-align: middle;
 }
 
 .backward,
@@ -853,14 +999,25 @@ input[name="email"] {
 	transform: rotate(180deg);
 }
 
-.pagination-item .switch-current {
-  	opacity: 0.2;
+.switch-current {
+  opacity: 0.2;
 }
 
-.pagination-item .pagination-current {
+.number-link:hover,
+.number-link:focus {
+  width: 27px;
+  height: 27px;
+  line-height: 27px;
+
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+}
+
+.number .pagination-current {
 	width: 27px;
-	height: 23px;
-	padding-top: 4px;
+	height: 27px;
+  line-height: 27px;
 
 	background-color: #ffffff;
 	color: #323232;
