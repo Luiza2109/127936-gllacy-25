@@ -32,18 +32,22 @@
         </ul>
         <div class="user-wrapper">
           <div class="user-navigation">
-            <span class="visually-hidden">Поиск по сайту</span>
             <form action="search.html" method="get">
-              <input type="search" name="search" placeholder="Что ищем?">
+              <label for="search" class="visually-hidden">Строка поиска по сайту</label>
+              <input type="search" name="search" id="search" placeholder="Что ищем?">
             </form>
           </div>
           <div class="entrance">
             <ul class="user-navigation">
-              <li class="login-link">Вход</li>
+              <li class="login-link">
+                <a href="entrance.html" aria-label="Зарегистрироваться на сайте">Вход</a>
+              </li>
             </ul>
             <form action="entrance.html" method="post">
-              <input type="email" name="email" required placeholder="Электронная почта"><br>
-              <input type="password" name="password" required placeholder="Пароль"><br>
+              <label for="email" class="visually-hidden">Введите email для регистрации на сайте</label>
+              <input type="email" name="email" id="email" required placeholder="Электронная почта"><br>
+              <label for="password" class="visually-hidden">Введите пароль для регистрации на сайте</label>
+              <input type="password" name="password" id="password" required placeholder="Пароль"><br>
               <button type="submit">Войти</button>
               <div class="info-user">
                 <a href="password-reminder.html" class="password-reminder">Забыли пароль?</a>
@@ -51,9 +55,11 @@
               </div>
             </form>
           </div>
-          <div class="basket">
-            <span class="basket-text">Пусто</span>
-          </div>
+          <ul class="basket-box">
+            <li class="basket">
+              <a href="cart.html" aria-label="Корзина для товаров">Пусто<span class="badge"></span></a>
+            </li>
+          </ul>
         </div>
       </nav>
       <p class="main-info">С 10 до 20, ежедневно<br> <span>8 812 450-25-25</span></p>
@@ -64,9 +70,9 @@
         <section class="slider">
           <h2 class="visually-hidden">Купить пломбир!</h2>
           <div class="slider-controls">
-            <label for="product-1">Первый</label>
-            <label for="product-2">Второй</label>
-            <label for="product-3">Третий</label>
+            <label for="product-1">Первый слайдер</label>
+            <label for="product-2">Второй слайдер</label>
+            <label for="product-3">Третий слайдер</label>
           </div>
           <ul class="slider-list">
             <li class="slider-item slide" id="slide1">
@@ -155,7 +161,8 @@
             <div class="mailing-box">
               <p class="mailing-info">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно  &#61;&#41;</p>
               <form action="email.html" method="post" class="mailing-form">
-                <input type="email" name="email" placeholder="Электронная почта">
+                <label class="visually-hidden" for="email">Поле для электронной почты</label>
+                  <input type="email" name="email" placeholder="Электронная почта" id="email">
                 <button type="submit" class="button btn-email">Отправить</button>
               </form>
             </div>
@@ -166,7 +173,7 @@
         <h2 class="visually-hidden">Карта, как нас найти</h2>
         <div class="map-wrapper">
           <a href="map.html" class="map-picture">
-            <img src="img/map.jpg" alt="Улица Строителей, 15" height="430">
+            <img src="img/map.jpg" alt="Адрес магазина Глэйси: Улица Строителей, 15">
           </a>
           <div class="map-info">
             <p class="address">Адреc главного офиса<br> и офлайн-магазина:<br>
@@ -185,16 +192,16 @@
       <div class="footer-wrapper">
         <ul class="social-list">
           <li class="social-item">
-            <a href="https://twitter.com/htmlacademy_ru" target="_blank" rel="noopener"><span class="visually-hidden">Мы в твиттере</span></a>
+            <a href="https://twitter.com/htmlacademy_ru" target="_blank" rel="noopener" aria-label="Мы в твиттере"></a>
           </li>
           <li class="social-item">
-            <a href="https://www.instagram.com/htmlacademy" target="_blank" rel="noopener"><span class="visually-hidden">Мы в инстаграмм</span></a>
+            <a href="https://www.instagram.com/htmlacademy" target="_blank" rel="noopener" aria-label="Мы в инстаграмм"></a>
           </li>
           <li class="social-item">
-            <a href="https://www.facebook.com/htmlacademy" target="_blank" rel="noopener"><span class="visually-hidden">Мы в фейсбуке</span></a>
+            <a href="https://www.facebook.com/htmlacademy" target="_blank" rel="noopener" aria-label="Мы в фейсбуке"></a>
           </li>
           <li class="social-item">
-            <a href="https://vk.com/htmlacademy" target="_blank" rel="noopener"><span class="visually-hidden">Мы в вконтакте</span></a>
+            <a href="https://vk.com/htmlacademy" target="_blank" rel="noopener" aria-label="Мы в вконтакте"></a>
           </li>
         </ul>
         <ul class="documents-list">
@@ -208,7 +215,7 @@
             <a href="#">Наши документы</a>
           </li>
           <li class="documents-item">
-            <a href="#">Экологические стандарты    </a>
+            <a href="#">Экологические стандарты</a>
           </li>
         </ul>
         <div class="htmlacademy">

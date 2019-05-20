@@ -126,10 +126,20 @@ input[type="radio"].visually-hidden {
 	display: none;
 }
 
+.basket-box {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
 .entrance-text,
-.basket-text {
+.basket a,
+.user-navigation a {
+  font-size: 14px;
+  line-height: 16px;
 	font-weight: 500;
-	cursor: pointer;
+  color: #ffffff;
 }
 
 /* ------- Slider -------- */
@@ -553,8 +563,12 @@ input[name="email"] {
 /* ---------- Карта ----------- */
 .map-wrapper {
 	position: relative;
-	width: 1200px;
+	width: 100%;
 	margin: 0 auto;
+}
+
+.map-picture img {
+  width: 100%;
 }
 
 .map-info {
