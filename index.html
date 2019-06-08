@@ -18,55 +18,57 @@
           <img src="img/svg-gllacy/logo.svg" width="154" height="63" alt="Логотип магазина мороженого Ice Cream">
         </a>
         <ul class="site-navigation">
-          <li><a href="catalog.html"><span>Каталог</span></a>
-            <ul class="navigation-hover">
-              <li><a href="new.html">Новинки</a></li>
-              <li><a href="creamy.html">Сливочное</a></li>
-              <li><a href="sherbet.html">Щербеты</a></li>
-              <li><a href="fruit-ice.html">Фруктовый лед</a></li>
-              <li><a href="melorin.html">Мелорин</a></li>
+          <li><a class="navigation-item catalog-item" href="catalog-ice.html"><span>Каталог</span></a>
+            <ul class="navigation-drop-down">
+              <li><a class="new-menu" href="new.html">Новинки</a></li>
+              <li><a class="drop-down-item" href="gllacy-catalog.html">Сливочное</a></li>
+              <li><a class="drop-down-item" href="sherbet.html">Щербеты</a></li>
+              <li><a class="drop-down-item" href="fruit-ice.html">Фруктовый лед</a></li>
+              <li><a class="drop-down-item" href="melorin.html">Мелорин</a></li>
             </ul>
           </li>
-          <li><a href="delivery.html"><span>Доставка и оплата</span></a></li>
-          <li><a href="company.html"><span>О Компании</span></a></li>
+          <li><a class="navigation-item" href="delivery.html"><span>Доставка и оплата</span></a></li>
+          <li><a class="navigation-item" href="company.html"><span>О Компании</span></a></li>
         </ul>
         <div class="user-wrapper">
-          <div class="user-navigation">
+          <div class="user-navigation navigation-search">
             <a href="search.html">
               <span class="search-img" aria-label="Поиск по сайту">
                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="17" height="17" viewBox="0 0 17 17"><path fill="#fff" d="M16.958 15.527L11.75 10.32A6.455 6.455 0 0 0 13 6.5 6.5 6.5 0 1 0 6.5 13a6.465 6.465 0 0 0 3.839-1.263l5.205 5.204 1.414-1.414zM6.5 11C4.019 11 2 8.981 2 6.5S4.019 2 6.5 2 11 4.019 11 6.5 8.981 11 6.5 11z"/></svg>
               </span>
             </a>
-            <form action="search.html" method="get">
-              <label for="search" class="visually-hidden">Строка поиска по сайту</label>
-              <input type="search" name="search" id="search" placeholder="Что ищем?">
-            </form>
+            <div class="search-form">
+              <form action="search.html" method="get">
+                <label for="search" class="visually-hidden">Строка поиска по сайту</label>
+                <input type="search" name="search" id="search" placeholder="Что ищем?" class="search-field">
+              </form>
+            </div>
           </div>
           <div class="entrance">
-            <ul class="user-navigation">
+            <ul class="user-navigation navigation-registration">
               <li class="login-link">
-                <a href="entrance.html" aria-label="Зарегистрироваться на сайте">
+                <a href="entrance.html">
                   <span class="entrance-img">
                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="21" height="19" viewBox="0 0 21 19"><g fill="#fff"><path d="M6 14.875L12.917 9.5 6 4.125v2.917H-.042v4.917H6z"/><path d="M18 0H5C3.9 0 3 .9 3 2v2h2V2h13v15H5v-2H3v2c0 1.1.9 2 2 2h13c1.1 0 2-.9 2-2V2c0-1.1-.9-2-2-2z"/></g></svg>
                   </span>
                   <span class="entrance-text">Вход</span>
                 </a>
+                <form action="entrance.html" method="post" class="entrance-form">
+                  <label for="email-checkin" class="visually-hidden">Введите email для регистрации на сайте</label>
+                  <input type="email" name="email" id="email-checkin" required placeholder="Электронная почта" class="email-field"><br>
+                  <label for="password" class="visually-hidden">Введите пароль для регистрации на сайте</label>
+                  <input type="password" name="password" id="password" required placeholder="Пароль" class="password-field"><br>
+                  <button type="submit" class="button entrance-btn">Войти</button>
+                  <div class="info-user">
+                    <a href="password-reminder.html" class="password-reminder">Забыли пароль?</a>
+                    <a href="new-registration.html" class="new-registration">Новая регистрация</a>
+                  </div>
+                </form>
               </li>
             </ul>
-            <form action="entrance.html" method="post">
-              <label for="email" class="visually-hidden">Введите email для регистрации на сайте</label>
-              <input type="email" name="email" id="email" required placeholder="Электронная почта"><br>
-              <label for="password" class="visually-hidden">Введите пароль для регистрации на сайте</label>
-              <input type="password" name="password" id="password" required placeholder="Пароль"><br>
-              <button type="submit">Войти</button>
-              <div class="info-user">
-                <a href="password-reminder.html" class="password-reminder">Забыли пароль?</a>
-                <a href="new-registration.html" class="new-registration">Новая регистрация</a>
-              </div>
-            </form>
           </div>
           <ul class="basket-box">
-            <li class="basket">
+            <li class="basket empty-basket">
               <a href="cart.html" aria-label="Корзина для товаров">
                 <span class="basket-img">
                   <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20"><g fill="#FFF"><path d="M5.657 2.031L5.422 0H0v2h3.64l1.5 13h13.988l1.699-12.969H5.657zM17.372 13H6.922L5.888 4.031h12.66L17.372 13z"/><circle cx="6.984" cy="18" r="2"/><circle cx="15.984" cy="18" r="2"/></g></svg>
@@ -107,62 +109,73 @@
         <section class="promo">
           <h2 class="visually-hidden">Промо-акции</h2>
           <div class="promo-raspberry">
-            <div class="promo-box promo-box-raspberry">
-              <h3 class="promo-caption">Малинка даром!</h3>
-              <p class="promo-text">При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
-              <div class="button-box">
-                <a href="promo-raspberry.html" class="button button-promo">Хочу варенье!</a>
-              </div>
+            <h3 class="promo-caption">Малинка даром!</h3>
+            <p class="promo-text">При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
+            <div class="button-box">
+              <a href="promo-raspberry.html" class="button button-promo">Хочу варенье!</a>
             </div>
           </div>
           <div class="promo-chocolate">
-            <div class="promo-box promo-box-chocolate">
-              <h3 class="promo-caption">Шоколадки даром!</h3>
-              <p class="promo-text">При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки  совершенно бесплатно.</p>
-              <div class="button-box">
-                <a href="promo-chocolate.html" class="button button-promo">Хочу шоколадки!</a>
-              </div>
+            <h3 class="promo-caption">Шоколадки даром!</h3>
+            <p class="promo-text">При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки  совершенно бесплатно.</p>
+            <div class="button-box">
+              <a href="promo-chocolate.html" class="button button-promo">Хочу шоколадки!</a>
             </div>
           </div>
         </section>
-        <section class="hit-ice">
-          <h2 class="visually-hidden">Хиты мороженого</h2>
-          <ul class="hit-list">
-            <li class="hit-item">
-              <img src="img/ice-1.jpg" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
-              <b class="cream-price">310 <span class="kilo">/кг</span></b>
-              <div class="cream-wrapper">
-                <a href="orange-ice.html" class="cream-description">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
-              </div>
-            </li>
-            <li class="hit-item">
-              <img src="img/ice-2.jpg" width="267" height="267" alt="Сливочно-кофейное с кусочками шоколада">
-              <b class="cream-price">380 <span class="kilo">/кг</span></b>
-              <div class="cream-wrapper">
-                <a href="coffee-ice.html" class="cream-description">Сливочно-кофейное с кусочками шоколада</a>
-              </div>
-            </li>
-            <li class="hit-item">
-              <img src="img/ice-3.jpg" alt="Сливочно-клубничное с присыпкой из белого шоколада">
-              <b class="cream-price">355 <span class="kilo">/кг</span></b>
-              <div class="cream-wrapper">
-                <a href="strawberry-ice.html" class="cream-description">Сливочно-клубничное с присыпкой из белого шоколада</a>
-              </div>
-            </li>
-            <li class="hit-item">
-              <img src="img/ice-4.jpg" alt="Сливочное крем-брюле с карамельной подливкой">
-              <b class="cream-price">415 <span class="kilo">/кг</span></b>
-              <div class="cream-wrapper">
-                <a href="brulee-ice.html" class="cream-description">Сливочное крем-брюле с карамельной подливкой</a>
-              </div>
-            </li>
-          </ul>
-        </section>
+      </div>
+      <section class="hit-ice product-ice">
+        <h2 class="visually-hidden">Хиты мороженого</h2>
+        <ul class="hit-list product-list">
+          <li class="hit-item product-item">
+            <img src="img/ice-1.jpg" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
+            <b class="cream-price">310 <span class="kilo">/кг</span></b>
+            <div class="cream-wrapper">
+              <a href="orange-ice.html" class="cream-description">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
+            </div>
+            <div class="cream-button">
+              <button type="button" class="button catalog-btn">Быстрый просмотр</button>
+            </div>
+          </li>
+          <li class="hit-item product-item">
+            <img src="img/ice-2.jpg" width="267" height="267" alt="Сливочно-кофейное с кусочками шоколада">
+            <b class="cream-price">380 <span class="kilo">/кг</span></b>
+            <div class="cream-wrapper">
+              <a href="coffee-ice.html" class="cream-description">Сливочно-кофейное с кусочками шоколада</a>
+            </div>
+            <div class="cream-button">
+              <button type="button" class="button catalog-btn">Быстрый просмотр</button>
+            </div>
+          </li>
+          <li class="hit-item product-item">
+            <img src="img/ice-3.jpg" alt="Сливочно-клубничное с присыпкой из белого шоколада">
+            <b class="cream-price">355 <span class="kilo">/кг</span></b>
+            <div class="cream-wrapper">
+              <a href="strawberry-ice.html" class="cream-description">Сливочно-клубничное с присыпкой из белого шоколада</a>
+            </div>
+            <div class="cream-button">
+              <button type="button" class="button catalog-btn">Быстрый просмотр</button>
+            </div>
+          </li>
+          <li class="hit-item product-item">
+            <img src="img/ice-4.jpg" alt="Сливочное крем-брюле с карамельной подливкой">
+            <b class="cream-price">415 <span class="kilo">/кг</span></b>
+            <div class="cream-wrapper">
+              <a href="brulee-ice.html" class="cream-description">Сливочное крем-брюле с карамельной подливкой</a>
+            </div>
+            <div class="cream-button">
+              <button type="button" class="button catalog-btn">Быстрый просмотр</button>
+            </div>
+          </li>
+        </ul>
+      </section>
+      <div class="container">
         <section class="about-us">
           <h2 class="about-us-caption">Магазин Глэйси — это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес</h2>
           <div class="advantages">
             <div class="advantages-box advantages-box-first">
-              <p class="advantages-item">Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</p>
+              <p class="advantages-item">Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.
+              </p>
               <p class="advantages-item">Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.</p>
             </div>
             <div class="advantages-box advantages-box-second">
@@ -195,9 +208,12 @@
       <section class="map">
         <h2 class="visually-hidden">Карта, как нас найти</h2>
         <div class="map-wrapper">
-          <a href="map.html" class="map-picture">
-            <img src="img/map.jpg" alt="Адрес магазина Глэйси: Улица Строителей, 15">
-          </a>
+          <div class="map-box">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5902.920618162854!2d30.318825623404322!3d59.94017588470695!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1559254616751!5m2!1sru!2sru" height="430" style="border:0" allowfullscreen></iframe>
+            <p>
+              <img src="img/map.jpg" alt="Адрес магазина Глэйси: Улица Строителей, 15" height="430">
+            </p>
+          </div> 
           <div class="map-box-info container">
             <div class="map-info">
               <p class="address">Адреc главного офиса<br> и офлайн-магазина:<br>
@@ -206,7 +222,7 @@
                 <span class="address-correct">8 812 450-25-25</span><br>
               (с 10 до 20 ежедневно)</p>
               <div class="btn-map-box">
-                <a class="button btn-map" href="#">Форма обратной связи</a>
+                <a class="button btn-map write-btn" href="#">Форма обратной связи</a>
               </div>
             </div>
           </div>
@@ -240,11 +256,34 @@
           </div>
         </div>
         <div class="htmlacademy">
-          <img src="img/svg-gllacy/logo-htmlacademy.svg" width="108" height="39" alt="">
-          <p class="htmlacademy-info">Сделано в <a href="https://htmlacademy.ru">HTML Academy</a> &copy; 2019</p>
+          <img src="img/svg-gllacy/logo-htmlacademy.svg" width="108" height="39" alt="htmlacademy интерактивные онлайн курсы">
+          <p class="htmlacademy-info">Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> &copy; 2019</p>
         </div>
       </div>
     </footer>
   </div>
+  <section class="modal modal-login">
+    <h2 class="visually-hidden">Обратная связь</h2>
+    <b class="modal-title">Мы обязательно вам ответим!</b>
+    <form class="login-form" action="https://echo.htmlacademy.ru/" method="post">
+      <p>
+        <label class="visually-hidden" for="name-user">Ваше имя</label>
+        <input type="text" id="name-user" class="name-user" name="login" placeholder="Как вас зовут?">
+      </p>
+      <p>
+        <label class="visually-hidden" for="email-user">Ваш e-mail:</label>
+        <input type="email" id="email-user" class="name-user" name="mail" placeholder="Ваша почта для ответа?">
+      </p>
+      <div class="modal-comment">
+        <label class="visually-hidden" for="comment">Текст письма</label>
+        <textarea name="letter" id="comment" cols="25" rows="6">Напишите что-нибудь...</textarea>
+      </div>
+      <div class="modal-btn-wrapper">
+        <input class="button modal-btn" type="submit" value="Отправить">
+      </div>
+    </form>
+    <button class="modal-close" type="button">Закрыть</button>
+  </section>
+  <script src="js/script.js"></script>
 </body>
 </html>
