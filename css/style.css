@@ -1217,7 +1217,7 @@ input[type="radio"].visually-hidden {
 .footer-wrapper {
   display: flex;
   width: 1146px;
-  margin-bottom: 30px;
+  padding-bottom: 30px;
 
   justify-content: space-between;
 }
