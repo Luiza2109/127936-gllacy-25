@@ -5,7 +5,7 @@
 	<title>Каталог магазина "Ice Cream"</title>
 	<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
 	<link rel="stylesheet" href="css/normalize.css">
-	<link rel="stylesheet" href="css/min-style.css">
+	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <header class="main-header container">
@@ -14,7 +14,7 @@
         <img src="img/svg-gllacy/logo.svg" width="154" height="63" alt="Логотип магазина мороженого Ice Cream">
       </a>
       <ul class="site-navigation">
-        <li><a class="main-navigation-current" href="catalog.html"><span>Каталог</span></a>
+        <li><a class="main-navigation-current" href="catalog.html">Каталог</a>
           <ul class="navigation-drop-down">
             <li><a class="new-menu" href="new.html">Новинки</a></li>
             <li class="current-drop-down"><a class="drop-down-item">Сливочное</a></li>
@@ -23,8 +23,8 @@
             <li><a class="drop-down-item" href="sherbet.html">Фруктовый лед</a></li>
           </ul>
         </li>
-        <li><a class="navigation-item" href="delivery.html"><span>Доставка и оплата</span></a></li>
-        <li><a class="navigation-item" href="company.html"><span>О Компании</span></a></li>
+        <li><a class="navigation-item" href="delivery.html">Доставка и оплата</a></li>
+        <li><a class="navigation-item" href="company.html">О Компании</a></li>
       </ul>
       <div class="user-wrapper">
         <div class="user-navigation navigation-search">
@@ -122,19 +122,19 @@
       				<ul class="fatty-list">
       					<li class="fatty-radio">
       						<input class="filter-percent visually-hidden" type="radio" name="filter-fatty" value="0%" id="filter-0" checked>
-      						<label for="filter-0"><span>0%</span></label>
+      						<label for="filter-0">0%</label>
       					</li>
       					<li class="fatty-radio">
       						<input class="filter-percent visually-hidden" type="radio" name="filter-fatty" value="до 10%" id="filter-10" checked>
-      						<label for="filter-10"><span>до 10%</span></label>
+      						<label for="filter-10">до 10%</label>
       					</li>
       					<li class="fatty-radio">
       						<input class="filter-percent visually-hidden" type="radio" name="filter-fatty" value="до 30%" id="filter-30" checked>
-      						<label for="filter-30"><span>до 30%</span></label>
+      						<label for="filter-30">до 30%</label>
       					</li>
       					<li class="fatty-radio">
       						<input class="filter-percent visually-hidden" type="radio" name="filter-fatty" value="выше 30%" id="filter-31" checked>
-      						<label for="filter-31"><span>выше 30%</span></label>
+      						<label for="filter-31">выше 30%</label>
       					</li>
       				</ul>
       			</fieldset>
@@ -321,17 +321,25 @@
     		</ul>
   			<ul class="pagination-list">
   				<li class="prev pagination-item">
-  					<a href="#" class="backward switch-current"><span class="visually-hidden">Назад</span></a>
+  					<a href="#" class="backward switch-current" aria-label="Назад"></a>
   				</li>
   				<li class="number pagination-item">
   					<a class="pagination-current">1</a>
+          </li>
+          <li class="number pagination-item">
   					<a class="number-link" href="#">2</a>
+          </li>
+          <li class="number pagination-item">
   					<a class="number-link" href="#">3</a>
+          </li>
+          <li class="number pagination-item">
   					<a class="number-link" href="#">4</a>
+          </li>
+          <li class="number pagination-item">
   					<a class="number-link" href="#">5</a>
-  				</li>
+          </li>
   				<li class="next pagination-item">
-  					<a href="#" class="forward"><span class="visually-hidden">Вперед</span></a>
+  					<a href="#" class="forward" aria-label="Вперед"></a>
   				</li>
   			</ul>
       </div>
@@ -342,22 +350,22 @@
       <ul class="social-list">
           <li class="social-item">
             <a href="https://twitter.com/htmlacademy_ru" target="_blank" rel="noopener" aria-label="Мы в твиттере">
-              <img src="img/svg-gllacy/twitter.svg" alt="Твиттер">
+              <img src="img/svg-gllacy/twitter.svg" width="32" height="32" alt="Твиттер">
             </a>
           </li>
           <li class="social-item">
             <a href="https://www.instagram.com/htmlacademy" target="_blank" rel="noopener" aria-label="Мы в инстаграмм">
-              <img src="img/svg-gllacy/instagram.svg" alt="Инстаграмм">
+              <img src="img/svg-gllacy/instagram.svg" width="32" height="32" alt="Инстаграмм">
             </a>
           </li>
           <li class="social-item">
             <a href="https://www.facebook.com/htmlacademy" target="_blank" rel="noopener" aria-label="Мы в фейсбуке">
-              <img src="img/svg-gllacy/fb.svg" alt="Фейсбук">
+              <img src="img/svg-gllacy/fb.svg" width="32" height="32" alt="Фейсбук">
             </a>
           </li>
           <li class="social-item">
             <a href="https://vk.com/htmlacademy" target="_blank" rel="noopener" aria-label="Мы в вконтакте">
-              <img src="img/svg-gllacy/vk.svg" alt="Вконтакте">
+              <img src="img/svg-gllacy/vk.svg" width="32" height="32" alt="Вконтакте">
             </a>
           </li>
         </ul>
@@ -377,7 +385,7 @@
       </ul>
       <div class="htmlacademy htmlacademy-catalog">
         <img src="img/svg-gllacy/logo-htmlacademy.svg" width="108" height="39" alt="">
-        <p class="htmlacademy-info">Сделано в <a href="https://htmlacademy.ru">HTML Academy</a> &copy; 2019</p>
+        <p class="htmlacademy-info">Сделано в <a href="https://htmlacademy.ru" class="htmlacademy-link">HTML Academy</a> &copy; 2019</p>
       </div>
     </div>
   </footer>
